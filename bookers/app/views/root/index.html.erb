@@ -18,8 +18,8 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><%= link_to "Home",root_path,class: "glyphicon glyphicon-home home" %></li>
                     <li><%= link_to "About",root_show_path,class: "glyphicon glyphicon-link about" %></li>
-                    <li><a class="glyphicon glyphicon-edit sign_up">Sign up</a></li>
-                    <li><a class="glyphicon glyphicon-log-in sign_in">Login</a></li>
+                    <li><%= link_to "sign up",new_user_registration_path,class: "glyphicon glyphicon-edit sign_up" %></li>
+                    <li><%= link_to "sign in",new_user_session_path,class: "glyphicon glyphicon-log-in sign_in" %></li>
                 </ul>
             </nav>
         </div>
@@ -36,10 +36,10 @@
                 <p> about various books!</p>
                 <div class="btn-wrapper">
                     <div class="row">
-                        <p><a class="btn btn-info col-xs-10 col-xs-offset-1 sign_in">Log in</a></p>
+                        <p><%= link_to "sign up",new_user_registration_path,class: "glyphicon glyphicon-edit sign_up" %></p>
                     </div>
                     <div class="row">
-                        <p><a class="btn btn-success col-xs-10 col-xs-offset-1 sign_up">Sign Up</a></p>
+                        <p><%= link_to "sign in",new_user_session_path,class: "glyphicon glyphicon-log-in sign_in" %></p>
                     </div>
                 </div>      
             </div>
