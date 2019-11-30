@@ -34,7 +34,7 @@
                     # user_table
 
                     <div class='row'>
-                        <%= link_to "hage",user_edit_path,class:"col-xs-12 btn btn-default glyphicon glyphicon-wrench edit_user_9594" %>
+                    <%= link_to "hage",profile_edit_path,class:"col-xs-12 btn btn-default glyphicon glyphicon-wrench" %>   
                     </div>
 
                     <h2>New book</h2>
@@ -54,8 +54,8 @@
                         <h4>Title</h4>
                         <h4>Opinion</h4>
                         <% @books.each do |post| %>
-                            <span><%= post.title %></span>
-                            <span><%= post.body %></span>
+                            <span><%= @books.title %></span>
+                            <span><%= @books.body %></span>
                          <% end %>
                         # book_post
 
