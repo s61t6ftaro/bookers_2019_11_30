@@ -57,19 +57,5 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # The path used after sign up for inactive accounts.
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
-  # end
-  def profile_update
-    current_user.assign_attributes(account_update_params)
-    if current_user.save
-      redirect_to root_mypage_path
-    else
-      render "profile_edit"
-    end
-  end
-
-  protected
-  
-  def configure_account_update_params
-   devise_parameter_sanitizer.permit(:account_update, keys: [:name])
-  end
+  # end  
 end
