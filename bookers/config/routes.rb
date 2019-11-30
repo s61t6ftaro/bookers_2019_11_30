@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   get 'root/mypage' => 'root#mypage'
   post 'books' => 'root/create'
   get 'users/edit' => 'devise/resistration#edit'
+  
+  
 end

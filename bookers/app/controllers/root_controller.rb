@@ -11,10 +11,8 @@ class RootController < ApplicationController
     
     def create
         book = Book.new(book_params)
-        book.save
-        
+        book.save        
     end
-
     private
     def book_params
         params.require(:book).permit(:title, :body)
