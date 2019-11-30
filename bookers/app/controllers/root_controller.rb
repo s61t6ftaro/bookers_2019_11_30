@@ -5,13 +5,14 @@ class RootController < ApplicationController
 
     def mypage
         @book = Book.new    
+        @books = Book.all
         flash[:success] = 'Welcome! You have signed up successfully.'
     end
     
     def create
         book = Book.new(book_params)
         book.save
-        redirect_to '/root/mypage'
+        redirect_to ''
     end
 
     private
