@@ -3,6 +3,10 @@ class RootController < ApplicationController
     def show
     end
 
+    def edit
+        @user = User.find(parms[:id])
+    end
+
     def mypage
         @book = Book.new    
         @books = Book.all
