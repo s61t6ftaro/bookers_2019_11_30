@@ -3,7 +3,10 @@
       <%= f.label :name %><br />
       <%= f.text_field :name %>
     </div>
-   
+    <%= form_for(@profileimage) do |f| %>
+        <%= f.attachment_field :image %>
+    <% end %>
+
     <div class="actions">
       <%= f.submit "Update" %>
     </div>
