@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
     root to: 'home#index'
     get 'home/show' => 'home#show'
+    resources :user
     devise_for :users
 #   devise_scope :user do
 #     get 'profile_edit', to: 'users/registrations#profile_edit', as: 'profile_edit'
@@ -9,6 +10,4 @@ Rails.application.routes.draw do
 #   get 'root/mypage' => 'root#mypage'
 #   post 'books' => 'root/create'
 #   get 'users/edit' => 'devise/resistration#edit'
-  
-  
 end
