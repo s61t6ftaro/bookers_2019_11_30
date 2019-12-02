@@ -4,6 +4,11 @@ Rails.application.routes.draw do
     resources :user
     devise_for :users
     post 'books' => 'user/create'
+    get 'books/user_book_list' => 'user#user_book_list'
+    
+    
+    
+
 #   devise_scope :user do
 #     get 'profile_edit', to: 'users/registrations#profile_edit', as: 'profile_edit'
 #     patch 'profile_update', to: 'users/registrations#profile_update', as: 'profile_update'
