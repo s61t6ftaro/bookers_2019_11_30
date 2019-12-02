@@ -3,19 +3,10 @@ class UserController < ApplicationController
         @book = Book.new
     end
 
-    def new
-    end
-
-    def user_book_list
-        @book_list = Book.new
-        @books = Book.all
-    end
-
-
     def create
         book = Book.new(book_params)
         book.save
-        redirect_to 
+        redirect_to '/book'
     end
 
     private

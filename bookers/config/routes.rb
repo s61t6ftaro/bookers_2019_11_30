@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
     root to: 'home#index'
     get 'home/show' => 'home#show'
-    resources :user
+    resources :users
+    resources :books
     devise_for :users
     post 'books' => 'user/create'
-    get 'books/user_book_list' => 'user#user_book_list'
+    get 'book' => 'book#show'
+    
     
     
     
