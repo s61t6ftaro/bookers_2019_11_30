@@ -1,15 +1,4 @@
 Rails.application.routes.draw do
-    root to: 'home#index'
-    get 'home/show' => 'home#show'
-    resources :users
-    resources :books
-    devise_for :users
-    post 'books' => 'user/create'
-    get 'book' => 'book#show'
-    
-    
-    
-    
 
 #   devise_scope :user do
 #     get 'profile_edit', to: 'users/registrations#profile_edit', as: 'profile_edit'
