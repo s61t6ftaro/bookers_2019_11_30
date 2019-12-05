@@ -1,4 +1,4 @@
-class ProfilesController < ApplicationController
+class UsersController < ApplicationController
     def index
     end
 
@@ -8,9 +8,10 @@ class ProfilesController < ApplicationController
 
     def create
         book = Book.new(book_params)
+        book.user_id = @book
         book.save
         if book.save
-            redirect_to 
+            redirect_to '/books/:id'
         end
     end
 
