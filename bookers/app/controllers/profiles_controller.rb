@@ -1,12 +1,17 @@
 class ProfilesController < ApplicationController
     def index
+    end
+
+    def show
         @book = Book.new
     end
 
     def create
         book = Book.new(book_params)
         book.save
-        redirect_to 
+        if book.save
+            redirect_to 
+        end
     end
 
     private
