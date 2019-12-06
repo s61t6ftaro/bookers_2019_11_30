@@ -3,9 +3,7 @@ class UsersController < ApplicationController
     end
     
     def index
-        @book = Book.find(params[:id])
-        @book = Book.find_by(id: params[:format])
-        @book = Book.new
+        @users = User.all
     end
     
     def show

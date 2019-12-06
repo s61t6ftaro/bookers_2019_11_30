@@ -2,6 +2,7 @@ class BooksController < ApplicationController
     def new
         @book = Book.new
     end
+
     def show
     end
 
@@ -15,7 +16,7 @@ class BooksController < ApplicationController
             redirect_to user_path(@book)
         end
     end
-private
+    private
     def book_params
       params.require(:book).permit(:title, :body)
     end
