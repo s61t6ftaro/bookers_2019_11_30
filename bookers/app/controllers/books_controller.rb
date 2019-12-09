@@ -1,11 +1,13 @@
 class BooksController < ApplicationController
-    def new
-        @book = Book.new
+
+    def index
     end
+    
 
     def show
+        @book = Book.new
+        @book = Book.find(params[:id])
     end
-
 
     # ここでbook新規投稿の保存がされる。
     def create
@@ -13,7 +15,7 @@ class BooksController < ApplicationController
         @book.user_id = current_user.id
         @book.save
         if @book.save
-            redirect_to user_path(@book)
+            redirect_to book_path(@book)
         end
     end
     private

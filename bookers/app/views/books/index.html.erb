@@ -33,8 +33,6 @@
                 <h2>User info</h2>
                 
                     <div class='row'>
-                        <%= current_user.name %>
-                        <%= current_user.introduction %>
                     </div>
 
                     <h2>New book</h2>
@@ -53,7 +51,13 @@
                     <% end %>
                     </div>
 
-                    
+                    <div class='col-xs-9'>
+                        <h2>Books</h2>
+                        <h4>Title</h4>
+                        <p><%= @book.title %></p>
+                        <h4>Opinion</h4>
+                        <p><%= @book.body %></p>
+                    </div>
                 </div>
             </div>
         </div>
