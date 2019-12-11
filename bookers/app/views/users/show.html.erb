@@ -32,8 +32,13 @@
             <div class='col-xs-3'>
                 <h2>User info</h2>
                     <div class='row'>
-                        
+                        <%= image_tag("big_user_icon.jpg") %>
+                        <h4>name</h4>
+                        <%= current_user.name %>
+                        <h4>introduction</h4>
+                        <%= current_user.introduction %>
                     </div>
+                    <%= link_to "#",class:"col-xs-12 btn btn-default glyphicon glyphicon-wrench edit_user_9836"%>
                     <h2>New book</h2>
                     <%= form_for(@book) do |f| %>
                         <h4>Title</h4>
