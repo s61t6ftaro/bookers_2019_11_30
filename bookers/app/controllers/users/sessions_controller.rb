@@ -15,6 +15,10 @@ class Users::SessionsController < Devise::SessionsController
   #   super
   # end
 
+  # DELETE /resource
+  # def destroy
+  #   super
+  # end
   
 
   # protected
