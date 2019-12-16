@@ -19,7 +19,8 @@
                     <li><%= link_to "Home",root_path,class: "glyphicon glyphicon-home home" %></li>
                     <li><%= link_to "About",homes_show_path,class: "glyphicon glyphicon-link about" %></li>
                     <li><%= link_to "logout",destroy_user_session_path,class: "glyphicon glyphicon-log-out logout", method: :delete %></li>
-                    <li><%= link_to "Users",users_path,class: "glyphicon glyphicon-user users" %></li>
+                    <li><%= link_to "Users",users_path,class: "glyphicon glyphicon-user" %></li>
+                    <li><%= link_to "Books",books_path,class: "glyphicon glyphicon-book" %></li>
                 </ul>
             </nav>
         </div>
@@ -31,12 +32,12 @@
       	<div class='row'>
             <div class='col-xs-3'>
                 <h2>User info</h2>
-                <%= image_tag("big_user_icon.jpg") %>
-                <%= link_to "edit",edit_user_path,class:"col-xs-12 btn btn-default glyphicon glyphicon-wrench edit_user_9910" %>
+                <p><%= image_tag("big_user_icon.jpg") %></p>
                 <h4>name</h4>
                 <%= current_user.name %>
                 <h4>introduction</h4>
                 <%= current_user.introduction %>
+                <%= link_to "edit",edit_user_path,class:"col-xs-12 btn btn-default glyphicon glyphicon-wrench" %>
                     <div class='row'>
                     </div>
 
