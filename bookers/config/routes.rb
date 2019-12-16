@@ -3,5 +3,6 @@ Rails.application.routes.draw do
     get 'homes/show' => 'homes#show'
     devise_for :users
     resources :users
+    post 'user/id/edit' => 'userimages#create'
     resources :books
 end

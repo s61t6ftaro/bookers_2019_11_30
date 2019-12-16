@@ -35,12 +35,11 @@
         <% end %>
      
         name<p><%= f.text_field :name %></p>image
-        <p><%= f.attachment_field :image %></p>
+        <%= f.attachment_field :profile_image,class: "user-edit-form" %>
         <p>introduction<%= f.text_area :introduction %></p>
         <%= f.submit %>
     <% end %>
 
-      
     <footer>
         <div class='container'>
   	        <div class='row'>

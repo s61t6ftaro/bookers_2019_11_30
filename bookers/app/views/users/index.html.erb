@@ -32,29 +32,23 @@
       	<div class='row'>
             <div class='col-xs-3'>
                 <h2>User info</h2>
-                <p><%= image_tag("big_user_icon.jpg") %></p>
+                
                 <h4>name</h4>
                 <%= current_user.name %>
                 <h4>introduction</h4>
                 <%= current_user.introduction %>
-                
+                <p><%= link_to "edit",edit_user_path(@user.id),class:"col-xs-12 btn btn-default glyphicon glyphicon-wrench" %></p>                
                     <div class='row'>
 
                     </div>
 
                     <h2>New book</h2>
                     <%= form_for(@book) do |f| %>
-
                         <h4>Title</h4>
-                        
                         <%= f.text_field :title %>
-
                         <h4>Opinion</h4>
-
                         <%= f.text_area :body %><br />
-
                         <%= f.submit 'Create Book' %>
-
                     <% end %>
                     </div>
 
@@ -63,6 +57,7 @@
                     <h4>name</h4>
                     <% @users.each do |users| %>
                         <p><span><%= users.name %></span></p>
+                        <%= link_to "show",user_path(@user.id) %>
                      <% end %>
                     </div>
                 </div>
