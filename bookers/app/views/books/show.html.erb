@@ -61,7 +61,7 @@
                         <h2>Book detail</h2>
                         <p><%= @book.title %></p>
                         <p><%= @book.body %></p>
-                        <%= link_to "edit"%>
+                        <%= link_to "edit",edit_book_path(@book.id),class:"btn-sm btn-success" %>
                         <%= link_to "destroy"%>
                     </div>
                 </div>
