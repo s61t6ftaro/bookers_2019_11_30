@@ -62,7 +62,7 @@
                         <p><%= @book.title %></p>
                         <p><%= @book.body %></p>
                         <%= link_to "edit",edit_book_path(@book.id),class:"btn-sm btn-success" %>
-                        <%= link_to "destroy"%>
+                        <%= link_to 'destroy',destroy_book_path(@book.id),method: :delete, "data-confirm" => "本当に削除しますか？" %>
                     </div>
                 </div>
             </div>
