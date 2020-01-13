@@ -17,7 +17,7 @@ class BooksController < ApplicationController
         @book.user_id = current_user.id
         @book.save
         if @book.save
-            redirect_to book_path(@book)
+            redirect_to book_path(@book.id)
         end
     end
 
