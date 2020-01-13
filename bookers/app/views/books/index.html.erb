@@ -9,34 +9,16 @@
   </head>
 
   <body>
-  <header class="navbar navbar-fixed-top navbar-inverse">
-        <div class="container">
-            <nav class='nav navbar-nav navbar-left' >
-                <span>Bookers</span>
-            </nav>
-            <nav>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><%= link_to "Home",root_path,class: "glyphicon glyphicon-home home" %></li>
-                    <li><%= link_to "About",homes_show_path,class: "glyphicon glyphicon-link about" %></li>
-                    <li><%= link_to "logout", destroy_user_session_path,class: "glyphicon glyphicon-log-out logout", method: :delete %></li>
-                    <li><%= link_to "Users",users_path,class: "glyphicon glyphicon-user" %></li>
-                    <li><%= link_to "Books",books_path,class: "glyphicon glyphicon-book" %></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-      <div class='body'>
+    <div class='body'>
       <div class='container'>
         <%= flash[:success] %>
       	<div class='row'>
             <div class='col-xs-3'>
                 <h2>User info</h2>
                     <div class='row'>
-                    <%= attachment_image_tag @book.user, :profile_image,format: 'jpeg',size: "100x100",fallback: "no_image.jpg" %></td>
+                    <%= attachment_image_tag @book, :profile_image,format: 'jpeg',size: "100x100",fallback: "no_image.jpg" %></td>
                     <p><%= @book.title %></p>
                     <p><%= @book.body %></p>
-                  
                     <%= link_to 'destroy',destroy_book_path(@book.id),method: :delete, "data-confirm" => "本当に削除しますか？" %>
                     </div>
 
