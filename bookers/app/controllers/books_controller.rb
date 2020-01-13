@@ -2,12 +2,10 @@ class BooksController < ApplicationController
     def index
         @book = Book.new
         @books = Book.all
-        @book = @user
     end                                                  
     def show
         @book = Book.new
         @book = Book.find(params[:id])
-        @book = @user
     end
 
     def edit
