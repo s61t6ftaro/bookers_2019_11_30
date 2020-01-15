@@ -20,7 +20,11 @@
                 <%= @user.name %>
                 <h4>introduction</h4>
                 <p><%= @user.introduction %></p>
-                <%= link_to "edit",edit_user_path,class:"col-xs-12 btn btn-default glyphicon glyphicon-wrench" %>
+                <% if  @user.id == current_user.id %>
+                  <%= link_to "edit",edit_user_path,class:"col-xs-12 btn btn-default glyphicon glyphicon-wrench" %>
+                <% else %>
+                <%= link_to "edit",user_path(current_user.id),class:"col-xs-12 btn btn-default glyphicon glyphicon-wrench" %>
+                <% end %>
                     <div class='row'>
                     </div>
 
