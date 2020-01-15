@@ -17,9 +17,9 @@
                 <h2>User info</h2>
                 <%= attachment_image_tag @user, :profile_image,size: "100x100",fallback: "no_image.jpg" %></td>
                 <h4>name</h4>
-                <%= current_user.name %>
+                <%= @user.name %>
                 <h4>introduction</h4>
-                <p><%= current_user.introduction %></p>
+                <p><%= @user.introduction %></p>
                 <%= link_to "edit",edit_user_path,class:"col-xs-12 btn btn-default glyphicon glyphicon-wrench" %>
                     <div class='row'>
                     </div>
