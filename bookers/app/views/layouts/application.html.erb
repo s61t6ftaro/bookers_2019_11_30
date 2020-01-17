@@ -8,8 +8,8 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-    <%= flash[:notice] %>
-    <% if user_signed_in? %>
+  <% if user_signed_in? %>
+  <%= flash[:notice] %>
       <header class="navbar navbar-fixed-top navbar-inverse">
         <div class="container">
           <nav class='nav navbar-nav navbar-left' >
@@ -26,6 +26,7 @@
         </div>
       </header>
     <% else %>
+    <%= flash[:notice] %>
       <header class="navbar navbar-fixed-top navbar-inverse">
         <div class="container">
           <nav class='nav navbar-nav navbar-left' >
