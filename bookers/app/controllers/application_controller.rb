@@ -1,10 +1,19 @@
 class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
-    user_path(resource)
-  end 
+    if current_user
+      flash[:notice] = 'Signed in successfully' 
+      user_path(resource)
+    else
+      user_path(resource)
+      flash[:notice] = 'Welcome! You have signed up successfully.'
+    end
+  end
+
   def after_sign_out_path_for(resource)
+    flash[:notice] = 'Signed out successfully.' 
     root_path(resource)
   end 
+
   before_action :configure_permitted_parameters, if: :devise_controller?
   
   
