@@ -38,21 +38,29 @@
                 </div>
               <% end %>
             </div>
-
+          </div>
           <div class='col-xs-9'>
-                        <h2>Book detail</h2>
-                        <%= link_to user_path(@book.user.id) do %>
-                          <%= attachment_image_tag @book.user, :profile_image,format: 'jpeg',size: "100x100",fallback: "no_image.jpg" %>
-                          <%= @book.user.name %>
-                        <% end %>
-                        <p><%= @book.title %></p>
-                        <p><%= @book.body %></p>
-                        <%= link_to "edit",edit_book_path,class:"btn-sm btn-success" %>
-                        <%= link_to 'destroy',destroy_book_path,method: :delete, "data-confirm" => "本当に削除しますか？" %>
-                    </div>
-                </div>
-            </div>
+            <h2>Book detail</h2>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>
+                    <%= link_to user_path(@book.user.id) do %>
+                      <%= attachment_image_tag @book.user, :profile_image,format: 'jpeg',size: "40x40",fallback: "no_image.jpg",class:"attachment user profile_image fallback" %><br>
+                      <%= @book.user.name %>
+                    <% end %>
+                  </td>
+                  <td><%= @book.title %></td>
+                  <td><%= @book.body %></td>
+                  <td><%= link_to "edit",edit_book_path,class:"btn-sm btn-success" %></td>
+                  <td><%= link_to 'destroy',destroy_book_path,method: :delete, "data-confirm" => "本当に削除しますか？",class:"btn-sm btn-danger destroy_book_17746" %></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+      </div>
+    </div>
 
     <footer>
         <div class='container'>
