@@ -4,6 +4,15 @@
     <div class='body'>
       <div class='container'>
         <p id="notice"><%= flash[:notice] %></p>
+        <% if @user.errors.any? %>
+          <div id="error_explanation" class="alert alert-danger">
+            <ul>
+              <% @user.errors.full_messages.each do |message| %>
+                <li>error <%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
         <div class='row'>
           <div class='col-xs-3'>
             <h2>User info</h2>
