@@ -4,6 +4,9 @@
     <div class='body'>
       <div class='container'>
         <%= flash[:success] %>
+        <% if @book.errors.any? %>
+          <%= render 'layouts/_error_messages' %>
+        <% end %>
         <div class='row'>
           <div class='col-xs-3'>
             <h2>User info</h2>
