@@ -5,7 +5,13 @@
       <div class='container'>
         <%= flash[:success] %>
         <% if @book.errors.any? %>
-          <%= render 'layouts/_error_messages' %>
+          <div id="error_explanation" class="alert alert-danger">
+            <ul>
+              <% @book.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
         <% end %>
         <div class='row'>
           <div class='col-xs-3'>
