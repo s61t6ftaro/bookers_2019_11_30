@@ -1,3 +1,4 @@
+```
 Bookモデルのテスト      
   バリデーションのテスト
     titleカラム
@@ -165,6 +166,7 @@ boostrapのテスト
       投稿一覧のユーザーの画像のリンク先が正しい (FAILED - 92)
       投稿一覧のtitleのリンク先が正しい (FAILED - 93)
       投稿一覧にopinionが表示される (FAILED - 94)
+'''
 
 An error occurred in an `after(:suite)` hook.
 Failure/Error: DatabaseCleaner.strategy = :transaction
