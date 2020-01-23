@@ -11,6 +11,15 @@
   <body>
     <div class="body">
       <div class="container">
+      <% if @user.errors.any? %>
+          <div id="error_explanation" class="alert alert-danger">
+            <% @user.errors.full_messages.each do |message| %>
+              <ul>
+                <li>error <%= message %></li>
+              </ul>
+            <% end %>
+          </div>
+        <% end %>
       <h2>User info</h2>
       <%= form_for(@user) do |f| %>      
           <div class="field">
