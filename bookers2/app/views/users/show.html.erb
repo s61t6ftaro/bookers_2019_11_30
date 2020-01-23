@@ -3,18 +3,16 @@
   <body>
     <div class='body'>
       <div class='container'>
-      <%= form_for(@user) do |f| %>      
+        <p id="notice"><%= flash[:notice] %></p>
         <% if @user.errors.any? %>
           <div id="error_explanation" class="alert alert-danger">
-            <ul>
-              <% @user.errors.full_messages.each do |message| %>
+            <% @user.errors.full_messages.each do |message| %>
+              <ul>
                 <li>error <%= message %></li>
-              <% end %>
-            </ul>
+              </ul>
+            <% end %>
           </div>
         <% end %>
-      <% end %>
-        <p id="notice"><%= flash[:notice] %></p>
       	<div class='row'>
           <div class='col-xs-3'>
             <h2>User info</h2>
