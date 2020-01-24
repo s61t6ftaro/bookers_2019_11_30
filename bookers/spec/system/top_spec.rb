@@ -18,8 +18,8 @@ describe 'トップページのテスト' do
     context 'ログインしている場合の挙動を確認' do
       it 'Log inリンクをクリックしたらユーザー詳細画面へ遷移する' do
         visit new_user_session_path
-        fill_in 'Name', with: user.name
-        fill_in 'Password', with: user.password
+        fill_in 'user[name]', with: user.name
+        fill_in 'user[password]', with: user.password
         click_button 'Log in'
         visit root_path
 
@@ -28,12 +28,12 @@ describe 'トップページのテスト' do
       end
       it 'Sign upリンクをクリックしたらユーザー詳細画面に遷移する' do
         visit new_user_session_path
-        fill_in 'Name', with: user.name
-        fill_in 'Password', with: user.password
+        fill_in 'user[name]', with: user.name
+        fill_in 'user[password]', with: user.password
         click_button 'Log in'
         visit root_path
 
-        click_link 'Sign up'
+        click_link 'Sign Up'
         expect(page).to have_content 'User info'
       end
     end
