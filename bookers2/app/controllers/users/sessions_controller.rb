@@ -6,6 +6,7 @@ class Users::SessionsController < Devise::SessionsController
   # GET /resource/sign_in
   # def new
   # end
+  flash[:alert] ="ユーザ名、パスワードが一致しません"
 
   # POST /resource/sign_in
   # def create  

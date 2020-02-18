@@ -3,7 +3,7 @@ class BooksController < ApplicationController
     before_action :correct_user_book, only: [:edit, :update]
     def index
         @book = Book.new
-        @books = Book.all
+        @books = Book.all.order(created_at: :desc)
     end                                                  
     def show
         @book = Book.new
@@ -18,7 +18,7 @@ class BooksController < ApplicationController
         @book = Book.new(book_params)
         @book.user_id = current_user.id
         if @book.save
-            flash[:notice] = "You have creatad book successfully."
+            flash[:notice] = "You have creatad mutter successfully."
             redirect_to book_path(@book.id)
         else
             @books = Book.all 
@@ -31,7 +31,7 @@ class BooksController < ApplicationController
         @book = Book.find(params[:id])
         if @book.update_attributes(book_params)
             redirect_to book_path
-            flash[:notice] = "You have updated book successfully."
+            flash[:notice] = "You have updated mutter successfully."
         else  
             render 'edit'
         end
