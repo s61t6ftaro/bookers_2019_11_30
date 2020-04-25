@@ -1,5 +1,7 @@
 完成作品はbookersの方
-※bookers2は一時的に立てたもの
+※bookers2とmeshiteroは削除済み
+  - 二つとも脆弱性の指摘が多かったので消した
+
 
 rspec errors all clear
 
