@@ -1,17 +1,17 @@
 <html>
-<body>
-<% if @book.errors.any? %>
-  <div id="error_explanation" class="alert alert-danger">
-  <% @book.errors.full_messages.each do |message| %>
-    <ul>
-      <li>error <%= message %></li>
-    </ul>
-  <% end %>
-  </div>
-<% end %>
+  <body>
     <div class='body'>
       <div class='container'>
         <%= flash[:success] %>
+        <% if @booknew.errors.any? %>
+          <div id="error_explanation" class="alert alert-danger">
+            <% @booknew.errors.full_messages.each do |e| %>
+              <ul>
+                <li>error<%= e %></li>
+              </ul>
+            <% end %>
+          </div>
+        <% end %>
         <div class='row'>
           <div class='col-xs-3'>
             <h2>User info</h2>
@@ -54,7 +54,7 @@
                         <%= attachment_image_tag book.user, :profile_image,format: 'jpeg',size: "40x40",fallback: "no_image.jpg" %>
                       <% end %>
                     </th>
-                    <th><%=link_to book.title, "/books/#{book.id}" %></th>
+                    <th><%=link_to book.title,book_path(book.id)  %></th>
                     <th><%= book.body %></th>
                   </tr>
                 <% end %>
