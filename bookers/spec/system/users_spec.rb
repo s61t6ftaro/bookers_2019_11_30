@@ -54,7 +54,7 @@ end
 
 describe 'ユーザーのテスト' do
   let(:user) { create(:user) }
-  let!(:test_user2) { create(:user) }
+  let!(:test_user2) { create(:user) } 
   let!(:book) { create(:book, user: user) }
   before do
     visit new_user_session_path

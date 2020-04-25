@@ -2,11 +2,11 @@ class UsersController < ApplicationController
     before_action :authenticate_user!
     before_action :correct_user, only: [:edit, :update]
     def index
-        @book = Book.new       
+        @booknew = Book.new       
         @users = User.all
     end
     def show
-        @book = Book.new       
+        @booknew = Book.new       
         @user = User.find(params[:id])
         @books = @user.books
     end
